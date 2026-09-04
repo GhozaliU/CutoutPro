@@ -274,7 +274,7 @@ st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 @st.cache_data(show_spinner=False)
 def remove_background(image_bytes: bytes) -> bytes:
     """Menghapus latar belakang dari gambar menggunakan pustaka rembg."""
-    return remove(image_bytes)
+    return remove(image_bytes, model_name="u2net")
 
 
 def load_image(file_like) -> Image.Image:
